@@ -1,0 +1,13 @@
+.example-container {
+    text-align: center;
+}
+
+.form-container {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.form-field {
+    display: inline
+}
