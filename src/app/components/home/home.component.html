@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row">
+    <h5 class="heading mt-5">Provider Portal - Claim Estimate</h5>
+  </div>
+  <form (ngSubmit)="calcEstimate()" [formGroup]="estimateForm">
+    <div class="row">
+      <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+        <label>Provider ID</label>
+        <input type="text" class="form-control" formControlName="provID">
+      </div>
+      <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+        <label>Subscriber ID</label>
+        <input type="text" class="form-control" formControlName="subID">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+        <label>First Name</label>
+        <input type="text" class="form-control" formControlName="membFN">
+      </div>
+      <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+        <label>Last Name</label>
+        <input type="text" class="form-control" formControlName="membLN">
+      </div>
+      <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+        <label>DOB</label>
+        <input type="text" class="form-control" formControlName="dob">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-lg-2 col-md-3  col-sm-6  col-xs-12">
+        <button type="button" class="btn add-button" (click)="addClaimLine()">+</button>
+      </div>
+    </div>
+    <div *ngFor="let item of estimateForm.get('claimLine')['controls'];let i = index;" formArrayName="claimLine">
+      <div [formGroupName]="i" class="row other-section">
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Procedure Code</label>
+          <input type="text" class="form-control" formControlName="proccd">
+        </div>
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Service ID</label>
+          <input type="text" class="form-control" formControlName="serviceID">
+        </div>
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Plan of Service</label>
+          <input type="text" class="form-control" formControlName="pos">
+        </div>
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Diagnostic Code</label>
+          <input type="text" class="form-control" formControlName="diagcd">
+        </div>
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Clain Form Date</label>
+          <input type="text" class="form-control" formControlName="clmfrmdt">
+        </div>
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Claim to Date</label>
+          <input type="text" class="form-control" formControlName="clmtodt">
+        </div>
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Charge Amount</label>
+          <input type="text" class="form-control" formControlName="clmamt">
+        </div>
+        <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 input-section">
+          <label>Units</label>
+          <input type="text" class="form-control" formControlName="units">
+        </div>
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 mt-2 d-grid gap-2">
+        <button type="button" class="btn btn btn-light">Reset</button>
+      </div>
+      <div class="col-lg-3 col-md-4  col-sm-6  col-xs-12 mt-2 d-grid gap-2">
+        <button type="submit" class="btn btn btn-success" [disabled]="!this.estimateForm.valid">Calculate Estimate</button>
+      </div>
+    </div>
+  </form>
+</div>

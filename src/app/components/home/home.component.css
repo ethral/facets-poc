@@ -1,0 +1,43 @@
+.container{
+  height: 100vh;
+  width: 100vw;
+}
+label {
+  font-size: small;
+  font-weight: lighter;
+  color: black;
+}
+input {
+  background-color: inherit;
+}
+input:focus{
+  outline: none !important;
+}
+.input-section{
+  margin-bottom: 2%;
+}
+.row{
+  margin: 0 1%;
+}
+.other-section{
+  border: 1px solid whitesmoke;
+  padding: 2% 0;
+  margin: 1% 0 !important;
+}
+
+.heading{
+  font-size: x-large;
+  margin-bottom: 30px;
+}
+.add-button{
+  width: 50px;
+  height: 50px;
+  background-color: cornflowerblue;
+  color: white;
+  float: right;
+  border-radius: 50%;
+  font-size: xxx-large;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
