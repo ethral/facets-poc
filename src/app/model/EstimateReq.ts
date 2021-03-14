@@ -1,4 +1,4 @@
-import { Claim } from './claim';
+import { Claim } from './Claim';
 
 export interface EstimateReq {
   ExternalRefId: string;

@@ -1,4 +1,4 @@
-import { REC_CLCL } from './REC_CLCL';
+import { REC_CLCL } from './rec_clcl';
 import { CLMD_COLL } from './clmd_coll';
 import { CLMD_COLL_ITEM } from './clmd_coll_item';
 

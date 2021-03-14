@@ -1,13 +1,34 @@
-.example-container {
-    text-align: center;
+#spinner-section {
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
+  position: absolute;
+  z-index: 15;
+  opacity: 0.8;
 }
 
-.form-container {
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 10px;
+#spinner-element {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-top-color: ghostwhite;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  margin-left: 50%;
+  margin-top: 20rem;
 }
 
-.form-field {
-    display: inline
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
